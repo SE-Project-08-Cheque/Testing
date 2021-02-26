@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="css-ure0nq"
+>
+  <div
+    className="css-dbpzvv"
+  >
+    <div
+      className="css-1rul54"
+    >
+      <div
+        className="css-gmuwbf"
+      >
+        <p
+          className="chakra-text css-kbn7if"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="css-sc5c3h"
+      >
+        <span
+          className="chakra-badge css-ifsvay"
+        >
+          Online
+        </span>
+      </div>
+      <div
+        className="css-16n1mrt"
+      >
+        <div
+          aria-valuemax={100}
+          aria-valuemin={0}
+          className="css-12om7f"
+          data-indeterminate=""
+          role="progressbar"
+          style={
+            Object {
+              "width": "0%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="css-8atqhb"
+    >
+      <div
+        className="chakra-stack css-zsoya5"
+      >
+        <a
+          href="/home"
+        >
+          <button
+            className="chakra-button css-35wvkn"
+            data-testid="overview"
+            type="button"
+          >
+            Overview
+          </button>
+        </a>
+        <div
+          className="chakra-stack__divider css-1kh2tyg"
+        />
+        <a
+          href="/Account_Details"
+        >
+          <button
+            className="chakra-button css-35wvkn"
+            type="button"
+          >
+            <div
+              className="css-gmuwbf"
+            >
+              Personal Details
+            </div>
+          </button>
+        </a>
+        <div
+          className="chakra-stack__divider css-1kh2tyg"
+        />
+        <a
+          href="/Contact_Details"
+        >
+          <button
+            className="chakra-button css-35wvkn"
+            type="button"
+          >
+            Contact Details
+          </button>
+        </a>
+        <div
+          className="chakra-stack__divider css-1kh2tyg"
+        />
+        <a
+          href="/AllNotifications"
+        >
+          <button
+            className="chakra-button css-35wvkn"
+            type="button"
+          >
+            <div
+              className="css-gmuwbf"
+            >
+              Notification
+            </div>
+          </button>
+        </a>
+        <div
+          className="chakra-stack__divider css-1kh2tyg"
+        />
+        <a
+          href="/ForgotPin"
+        >
+          <button
+            className="chakra-button css-35wvkn"
+            type="button"
+          >
+            <div
+              className="css-gmuwbf"
+            >
+              Fogot Pin
+            </div>
+          </button>
+        </a>
+        <div
+          className="chakra-stack__divider css-1kh2tyg"
+        />
+        <hr
+          aria-orientation="horizontal"
+          className="chakra-divider css-1upb9tn"
+          role="separator"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

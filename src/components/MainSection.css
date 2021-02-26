@@ -1,0 +1,42 @@
+.main-section {
+    margin-top: 75px;
+    height: 650px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../svg-4.svg') !important;
+    background-size: cover !important;
+}
+.buttons {
+    margin-top: 30px ;
+    border-color: red;
+    border-style: solid;
+    margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+    .buttons{
+      height: 1950px;
+    }
+    
+  }
+  @media screen and (min-width: 850px) {
+    .buttons{
+      height: 650px;
+    }
+    
+  }
+.dashboard {
+    background-image: url('../svg-6.svg') !important;
+    background-size: cover !important;
+
+
+}
+
+.welcome {
+    margin-top: 70px;
+    padding-top: 90px;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../svg-6.svg');
+    background-size: cover !important;
+}
+
+.forgotPass {
+  margin-bottom: 200px;
+}
