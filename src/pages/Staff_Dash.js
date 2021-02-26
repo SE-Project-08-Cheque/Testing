@@ -25,7 +25,6 @@ import {
     Tooltip,
 } from '@chakra-ui/react';
 import Sidebar from '../components/Sidebar';
-import Alert from '../components/Alert';
 import {
     ArrowRightIcon,
     CheckCircleIcon,

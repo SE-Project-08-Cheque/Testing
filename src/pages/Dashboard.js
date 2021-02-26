@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ChakraProvider,
   Box,
@@ -22,46 +22,43 @@ import {
   FormHelperText,
   Spinner,
   Tooltip,
-} from '@chakra-ui/react';
-import Sidebar from '../components/Sidebar';
-import Alert from '../components/Alert';
+} from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar";
 import {
   ArrowRightIcon,
   CheckCircleIcon,
   EmailIcon,
   PhoneIcon,
   StarIcon,
-} from '@chakra-ui/icons';
-import '../components/MainSection.css';
-import Footer from '../components/Footer';
-import SessionService from '../Services/SessionService';
-import { Redirect } from 'react-router-dom';
+} from "@chakra-ui/icons";
+import "../components/MainSection.css";
+import Footer from "../components/Footer";
+import SessionService from "../Services/SessionService";
+import { Redirect } from "react-router-dom";
 
 function Dashboard(props) {
-  const islogged=SessionService.isAuthenticated();
+  const islogged = SessionService.isAuthenticated();
   console.log(islogged);
 
-  if(!islogged){
-    return (
-      <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-    );
-  }
-  var data=SessionService.getdata();
-  console.log("1423");
-  var user=JSON.parse(data);
-  console.log(user);
+  // if(!islogged){
+  //   return (
+  //     <Redirect
+  //               to={{ pathname: '/', state: { from: props.location } }}
+  //           />
+  //   );
+  // }
+  // var user = props.user;
+  // console.log(user);
   return (
     <>
       <div className="dashboard">
-        <Sidebar disable={[false, true]}/>
+        <Sidebar disable={[false, true]} />
 
         <Box
           borderStyle="solid"
           borderColor="gray.800"
-          mt={{ base: '400px', md: '10px' }}
-          ml={{ base: '20px', md: '320px' }}
+          mt={{ base: "400px", md: "10px" }}
+          ml={{ base: "20px", md: "320px" }}
           pt="150px"
           h="700px"
           mr="20px"
@@ -73,17 +70,14 @@ function Dashboard(props) {
             borderColor="gray.200"
             borderWidth="2px"
             p="10px"
-            pt='30px'
+            pt="30px"
             mt="-20px"
             borderRadius="20px"
           >
             <Center>
-              <Grid templateColumns="repeat(3, 1fr)" gap={20}>
-                
-              </Grid>
+              <Grid templateColumns="repeat(3, 1fr)" gap={20}></Grid>
             </Center>
-            <Center mt='30px'>
-            </Center>
+            <Center mt="30px"></Center>
             <Box
               borderStyle="solid"
               borderColor="gray.200"
@@ -94,15 +88,17 @@ function Dashboard(props) {
               borderRadius="10px"
             >
               <Tooltip fontSize="md">
-                <Text pl="2px" color="gray.900" isTruncated>
+                <Text pl="2px"  data-testid="user_type" color="gray.900" isTruncated>
                   <IconButton
                     m="10px"
                     variant="outline"
                     colorScheme="teal"
                     aria-label="Send email"
+                   
                     icon={<ArrowRightIcon />}
                   />
-                  User Type : {user.user_type}                </Text>
+                  User Type : {props.user_type}{" "}
+                </Text>
               </Tooltip>
             </Box>
             <Box
@@ -113,15 +109,15 @@ function Dashboard(props) {
               m="10px"
               borderRadius="10px"
             >
-              <Tooltip  fontSize="md">
-                <Text pl="2px" color="gray.900" isTruncated>
+              <Tooltip fontSize="md">
+                <Text pl="2px" data-testid="user_id" color="gray.900" isTruncated>
                   <IconButton
                     m="10px"
                     colorScheme="green"
                     aria-label="Call"
                     icon={<PhoneIcon />}
                   />
-                  User ID : {user.user_id}
+                  User ID : {props.user_id}
                 </Text>
               </Tooltip>
             </Box>
@@ -134,15 +130,15 @@ function Dashboard(props) {
               m="10px"
               borderRadius="10px"
             >
-              <Tooltip  fontSize="md">
-                <Text pl="2px" color="gray.700" isTruncated>
+              <Tooltip fontSize="md">
+                <Text pl="2px" data-testid="username" color="gray.700" isTruncated>
                   <IconButton
                     m="10px"
                     colorScheme="red"
                     aria-label="Send email"
-                    icon={<CheckCircleIcon/>}
+                    icon={<CheckCircleIcon />}
                   />
-                  User Name : {user.username}
+                  User Name : {props.username}
                 </Text>
               </Tooltip>
             </Box>
@@ -155,15 +151,15 @@ function Dashboard(props) {
               m="10px"
               borderRadius="10px"
             >
-              <Tooltip  fontSize="md">
-                <Text pl="2px" color="gray.700" isTruncated>
+              <Tooltip fontSize="md">
+                <Text pl="2px" data-testid="account_no" color="gray.700" isTruncated>
                   <IconButton
                     m="10px"
                     colorScheme="blue"
                     aria-label="Send email"
                     icon={<EmailIcon />}
                   />
-                  User Account : {user.account_no}
+                  User Account : {props.account_no}
                 </Text>
               </Tooltip>
             </Box>

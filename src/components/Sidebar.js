@@ -107,6 +107,7 @@ function Sidebar() {
                 <Button
                   h="50px"
                   w="100%"
+                  data-testid = 'personal_details'
                   _hover={{
                     background: 'gray.800',
                     color: 'white',
@@ -124,6 +125,7 @@ function Sidebar() {
                 <Button
                   h="50px"
                   w="100%"
+                  data-testid = 'contact_details'
                   _hover={{
                     background: 'gray.800',
                     color: 'white',
@@ -141,6 +143,7 @@ function Sidebar() {
                 <Button
                   h="50px"
                   w="100%"
+                  data-testid = 'notification'
                   _hover={{
                     background: 'gray.800',
                     color: 'white',
@@ -158,6 +161,7 @@ function Sidebar() {
                 <Button
                   h="50px"
                   w="100%"
+                  data-testid = 'forgot_pin'
                   _hover={{
                     background: 'gray.800',
                     color: 'white',

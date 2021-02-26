@@ -45,55 +45,55 @@ export default function SignIn(props) {
   const islogged = SessionService.isAuthenticated();
   console.log(islogged);
 
-  if (islogged) {
-    return (
-      <Redirect
-        to={{ pathname: '/', state: { from: props.location } }}
-      />
-    );
-  }
+  // if (islogged) {
+  //   return (
+  //     <Redirect
+  //       to={{ pathname: '/', state: { from: props.location } }}
+  //     />
+  //   );
+  // }
 
   var submitform = () => {
 
-    API_Service.authUser(Username, password, (result) => {
-      if (result === "error" || result.data.success === false || result.data.data[0].status !== "APPROVED") {
-        setErr("Failed Log In");
-      }
-      else if (result.data.data[0].user_type === "CUSTOMER") {
-        console.log(result.data.data[0])
-        var json1 = result.data.data[0];
-        console.log("id");
-        var id = result.data.data[0].user_id;
+  //   API_Service.authUser(Username, password, (result) => {
+  //     if (result === "error" || result.data.success === false || result.data.data[0].status !== "APPROVED") {
+  //       setErr("Failed Log In");
+  //     }
+  //     else if (result.data.data[0].user_type === "CUSTOMER") {
+  //       console.log(result.data.data[0])
+  //       var json1 = result.data.data[0];
+  //       console.log("id");
+  //       var id = result.data.data[0].user_id;
 
-        API_Service.getAllDataCustomer(id, (result) => {
-          if (result !== "error" && result.data.success !== false) {
-            var json2 = result.data.data[0];
-            var json3 = Object.assign(json1, json2);
-            SessionService.initSession(JSON.stringify(json3));
-            props.history.push('/dashboard')
-          }
-        });
+  //       API_Service.getAllDataCustomer(id, (result) => {
+  //         if (result !== "error" && result.data.success !== false) {
+  //           var json2 = result.data.data[0];
+  //           var json3 = Object.assign(json1, json2);
+  //           SessionService.initSession(JSON.stringify(json3));
+  //           props.history.push('/dashboard')
+  //         }
+  //       });
 
 
-      } else {
-        console.log(result.data.data[0])
-        var json1 = result.data.data[0];
-        console.log("staff_id");
-        var id = result.data.data[0].user_id;
+  //     } else {
+  //       console.log(result.data.data[0])
+  //       var json1 = result.data.data[0];
+  //       console.log("staff_id");
+  //       var id = result.data.data[0].user_id;
 
-        API_Service.getAllStaffData(id, (result) => {
-          if (result !== "error" && result.data.success !== false) {
-            console.log("JSON2");
-            console.log(result.data);
-            var json2 = result.data.data[0];
-            console.log(json2);
-            var json3 = Object.assign(json1, json2);
-            SessionService.initSession(JSON.stringify(json3));
-            props.history.push('/Staff_Dashboard')
-          }
-        });
-      }
-    });
+  //       API_Service.getAllStaffData(id, (result) => {
+  //         if (result !== "error" && result.data.success !== false) {
+  //           console.log("JSON2");
+  //           console.log(result.data);
+  //           var json2 = result.data.data[0];
+  //           console.log(json2);
+  //           var json3 = Object.assign(json1, json2);
+  //           SessionService.initSession(JSON.stringify(json3));
+  //           props.history.push('/Staff_Dashboard')
+  //         }
+  //       });
+  //     }
+  //   });
   }
   return (
     <Container component="main" maxWidth="xs">
@@ -102,7 +102,9 @@ export default function SignIn(props) {
         <Avatar className={classes.avatar}>
 
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography 
+          data-testid="signin-text"
+        component="h1" variant="h5">
           Sign in
         </Typography>
         <TextField
@@ -113,6 +115,7 @@ export default function SignIn(props) {
           id="Username"
           label="Username"
           name="Username"
+          data-testid="username_input"
           value={Username}
           onChange={(e) => setUsername(e.target.value)}
           autoFocus
@@ -126,6 +129,7 @@ export default function SignIn(props) {
           label="Password"
           type="password"
           id="password"
+          data-testid="password_input"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -140,6 +144,7 @@ export default function SignIn(props) {
           fullWidth
           variant="contained"
           color="primary"
+          data-testid="signin-button"
           className={classes.submit}
           onClick={submitform}
         >

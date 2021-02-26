@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
-import { Avatar, Button, CssBaseline, TextField, Checkbox, Link, Grid, Box, Typography, makeStyles, Container, FormControlLabel } from '@material-ui/core';
-import SessionService from '../Services/SessionService';
-import { Redirect } from 'react-router-dom';
-import API_Service from '../Services/API_Service';
-
+import React, { useState } from "react";
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  Checkbox,
+  Link,
+  Grid,
+  Box,
+  Typography,
+  makeStyles,
+  Container,
+  FormControlLabel,
+} from "@material-ui/core";
+import SessionService from "../Services/SessionService";
+import { Redirect } from "react-router-dom";
+import API_Service from "../Services/API_Service";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {"Copyright © "}
       2021, All Rights Reserved | Designed by University of Moratuwa
     </Typography>
   );
@@ -17,16 +29,16 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(20),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(5),
   },
   submit: {
@@ -34,53 +46,39 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp(props) {
-
+export default function SignUp() {
   const classes = useStyles();
 
-  const [err, setErr] = useState('');
+  const [err, setErr] = useState("");
 
   const islogged = SessionService.isAuthenticated();
   console.log(islogged);
 
-  if (islogged) {
-    return (
-      <Redirect
-        to={{ pathname: '/', state: { from: props.location } }}
-      />
-    );
-  }
+  // if (islogged) {
+  //   return (
+  //     <Redirect
+  //       to={{ pathname: '/', state: { from: props.location } }}
+  //     />
+  //   );
+  // }
 
   var submitform = () => {
-
-    API_Service.signup(document, (result) => {
-      console.log(result);
-      try{
-        console.log(result.data.data.length);
-      if (result === "error" || result.data.success === false || result.data.data.length <6) {
-          setErr("Failed Sign Up Check Values");
-        }
-        else {
-          setErr("Success we will contact you as soon as possible");
-          
-        };
-        
-      }catch(e){
-        setErr("Failed Sign Up Check Values");
-      }
-      
-
-      
-
-
-      }
-    );
-  }
-
-
-
-
-
+    // API_Service.signup(document, (result) => {
+    //   console.log(result);
+    //   try{
+    //     console.log(result.data.data.length);
+    //   if (result === "error" || result.data.success === false || result.data.data.length <6) {
+    //       setErr("Failed Sign Up Check Values");
+    //     }
+    //     else {
+    //       setErr("Success we will contact you as soon as possible");
+    //     };
+    //   }catch(e){
+    //     setErr("Failed Sign Up Check Values");
+    //   }
+    //   }
+    // );
+  };
 
   var rows = [
     { id: "Username", type: "string" },
@@ -98,31 +96,31 @@ export default function SignUp(props) {
     { id: "Postal_Code", type: "number" },
     { id: "Contact_Primary", type: "number" },
     { id: "Email", type: "string" },
-  ]
+  ];
 
   const field = rows.map((row) => {
-    return <Grid  key={row.id} item xs={12}>
-      <p>{row.id}</p>
-      <TextField
-        key={row.id}
-        variant="outlined"
-        required
-        fullWidth
-        id={row.id}
-        name={row.id}
-        type={row.type}
-      />
-    </Grid>
-
+    return (
+      <Grid key={row.id} item xs={12}>
+        <p>{row.id}</p>
+        <TextField
+          key={row.id}
+          variant="outlined"
+          required
+          fullWidth
+          id={row.id}
+          name={row.id}
+          type={row.type}
+        />
+      </Grid>
+    );
   });
 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-        </Avatar>
-        <Typography component="h1" variant="h5">
+        <Avatar className={classes.avatar}></Avatar>
+        <Typography data-testid="signup-text" component="h1" variant="h5">
           Sign up
         </Typography>
         <form className={classes.form} noValidate>
@@ -132,7 +130,6 @@ export default function SignUp(props) {
               <p>{err}</p>
             </Grid>
           </Grid>
-
 
           <Button
             onClick={submitform}

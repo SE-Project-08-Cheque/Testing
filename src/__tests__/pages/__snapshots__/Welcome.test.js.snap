@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <div
+    className="welcome"
+  >
+    <div
+      className="css-1qqnwo1"
+    >
+      <div
+        className="css-19fmqat"
+      >
+        <div
+          className="css-mfufr1"
+        />
+        <div
+          className="css-1y4dbot"
+        >
+          <div
+            className="css-n16x53"
+          >
+            <h4
+              className="css-87gbc"
+            >
+              <img
+                className="chakra-image__placeholder css-i1yh3x"
+              />
+              <h5
+                className="chakra-heading css-kbn7if"
+                data-testid="heading"
+              >
+                Login to start
+              </h5>
+            </h4>
+            <div
+              className="css-15yujhg"
+            >
+              <span
+                className="css-bjuncv"
+                data-testid="text"
+              >
+                You can now send and receive checks easily
+              </span>
+            </div>
+            <button
+              className="chakra-button css-16sbcsi"
+              data-testid="login"
+              type="button"
+            >
+              Login
+              <span
+                className="chakra-button__icon css-1oeb2oe"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable={false}
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="css-dfiqwb"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="footer-container"
+  >
+    <section
+      className="footer-subscription"
+    >
+      <p
+        className="footer-subscription-heading"
+      >
+        Online Check is perfect for self-employed people
+        <br />
+        saving them tons of valuable time
+      </p>
+      <p
+        className="footer-subscription-text"
+      >
+        <div
+          className="css-x1sij0"
+        >
+          <span
+            className="chakra-badge css-637omx"
+          >
+            New
+          </span>
+        </div>
+        The only software which allows the user to create Single or Multiple checks and
+        <br />
+        giving functionality to a self-employed user at no extra cost.
+      </p>
+    </section>
+    <div
+      class="footer-links"
+    >
+      <div
+        className="footer-link-wrapper"
+      >
+        <div
+          class="footer-link-items"
+        >
+          <h2>
+            About Us
+          </h2>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Secured Service
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            24 / 7 Transactions
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Sustainability
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Terms of Service
+          </a>
+        </div>
+        <div
+          class="footer-link-items"
+        >
+          <h2>
+            Contact Us
+          </h2>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Contact
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Support
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Customer Care
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            10000+ Users
+          </a>
+        </div>
+      </div>
+      <div
+        className="footer-link-wrapper"
+      >
+        <div
+          class="footer-link-items"
+        >
+          <h2>
+            Social Media
+          </h2>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Instagram
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Facebook
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Youtube
+          </a>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Twitter
+          </a>
+        </div>
+        <div
+          class="footer-link-items"
+        >
+          <p
+            className="chakra-text css-kbn7if"
+          >
+            Bank of Ceylon
+          </p>
+          <p
+            className="chakra-text css-zjak30"
+          >
+            No 1, BOC Square,
+             
+          </p>
+          <p
+            className="chakra-text css-kbn7if"
+          >
+            Ceylon Mawatha,
+          </p>
+          <p
+            className="chakra-text css-kbn7if"
+          >
+            Colombo 01,Sri Lanka.
+          </p>
+          <p
+            className="chakra-text css-kbn7if"
+          >
+            Tel : +94112446790
+          </p>
+          <p
+            className="chakra-text css-kbn7if"
+          >
+            Email : cheque@boc.lk
+          </p>
+          <p
+            className="chakra-text css-kbn7if"
+          />
+        </div>
+      </div>
+    </div>
+    <section
+      class="social-media"
+    >
+      <div
+        class="social-media-wrap"
+      >
+        <div
+          class="footer-logo"
+        >
+          <a
+            className="social-logo"
+            href="/"
+            onClick={[Function]}
+          >
+            Online Cheque
+            <i
+              class="fab fa-typo3"
+            />
+          </a>
+        </div>
+        <small
+          class="website-rights"
+        >
+          © 2021, All Rights Reserved | Designed by University of Moratuwa
+        </small>
+        <div
+          class="social-icons"
+        >
+          <a
+            aria-label="Facebook"
+            class="social-icon-link facebook"
+            href="/"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <i
+              class="fab fa-facebook-f"
+            />
+          </a>
+          <a
+            aria-label="Instagram"
+            class="social-icon-link instagram"
+            href="/"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <i
+              class="fab fa-instagram"
+            />
+          </a>
+          <a
+            aria-label="Youtube"
+            class="social-icon-link youtube"
+            href="/"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <i
+              class="fab fa-youtube"
+            />
+          </a>
+          <a
+            aria-label="Twitter"
+            class="social-icon-link twitter"
+            href="/"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <i
+              class="fab fa-twitter"
+            />
+          </a>
+          <a
+            aria-label="LinkedIn"
+            class="social-icon-link twitter"
+            href="/"
+            onClick={[Function]}
+            target="_blank"
+          >
+            <i
+              class="fab fa-linkedin"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>,
+]
+`;

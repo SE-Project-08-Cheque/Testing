@@ -43,37 +43,37 @@ export default function StaffReg(props) {
   const islogged = SessionService.isAuthenticated();
   console.log(islogged);
 
-  if (!islogged) {
-    return (
-      <Redirect
-        to={{ pathname: '/', state: { from: props.location } }}
-      />
-    );
-  }
+  // if (!islogged) {
+  //   return (
+  //     <Redirect
+  //       to={{ pathname: '/', state: { from: props.location } }}
+  //     />
+  //   );
+  // }
 
   var submitform = () => {
 
-    API_Service.signupstaff(document, (result) => {
-      console.log(result);
-      try{
-      if (result === "error" || result.data.success === false) {
-          setErr("Failed Sign Up Check Values");
-        }
-        else {
-          setErr("Success we will contact you as soon as possible");
+    // API_Service.signupstaff(document, (result) => {
+    //   console.log(result);
+    //   try{
+    //   if (result === "error" || result.data.success === false) {
+    //       setErr("Failed Sign Up Check Values");
+    //     }
+    //     else {
+    //       setErr("Success we will contact you as soon as possible");
           
-        };
+    //     };
         
-      }catch(e){
-        setErr("Failed Sign Up Check Values Err");
-      }
+    //   }catch(e){
+    //     setErr("Failed Sign Up Check Values Err");
+    //   }
       
 
       
 
 
-      }
-    );
+    //   }
+    // );
   }
 
 
@@ -122,7 +122,7 @@ export default function StaffReg(props) {
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography data-testid='signup-text' component="h1" variant="h5">
           Sign up
         </Typography>
         <form className={classes.form} noValidate>
@@ -140,7 +140,7 @@ export default function StaffReg(props) {
             variant="contained"
             color="primary"
           >
-            Add Memeber
+            Add Member
           </Button>
           <Grid container justify="flex-end">
             <Grid item>

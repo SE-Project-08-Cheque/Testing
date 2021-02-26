@@ -85,6 +85,7 @@ function Card(props) {
               variant="solid"
               size="lg"
               mt="30px"
+              data-testid='go'
               rightIcon={<MdSend />}
             >
               Go

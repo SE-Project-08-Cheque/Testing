@@ -35,22 +35,23 @@ function MainSection(props) {
       <div className="main-section">
         <Box pt="150px" h="300px">
           <Center>
-            <Text pl="20px" fontSize="9xl" color="white">
+            <Text data-testid='welcome' pl="20px" fontSize="9xl" color="white">
               Welcome!
             </Text>
           </Center>
           <Center>
-            <Text pt="30px" fontSize="5xl" color="white">
+            <Text data-testid='send_cheque' pt="30px" fontSize="5xl" color="white">
               Send a cheque?
             </Text>
           </Center>
           <Center>
             <Button
               mt="20px"
+              data-testid='button'
               rightIcon={<MdSend />}
               colorScheme="red"
               variant="solid"
-              onClick={()=> props.history.push("/chequebuilder")}
+              // onClick={()=> props.history.push("/chequebuilder")}
             >
               Click Here!
             </Button>
@@ -58,7 +59,7 @@ function MainSection(props) {
         </Box>
       </div>
 
-      <div className="buttons" p="10px">
+      <div data-testid='cards' className="buttons" p="10px">
         <Card
           imageUrl="./images/svg-1.svg"
           imageAlt="User"

@@ -24,24 +24,24 @@ function Home(props) {
   const islogged=SessionService.isAuthenticated();
   console.log(islogged);
 
-  if(!islogged){
-    return (
-      <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-    );
-  }
+  // if(!islogged){
+  //   return (
+  //     <Redirect
+  //               to={{ pathname: '/', state: { from: props.location } }}
+  //           />
+  //   );
+  // }
   return (
     <>
       <div className="main-section">
         <Box pt="150px" h="300px">
           <Center>
-            <Text pl="20px" fontSize="9xl" color="white">
+            <Text data-testid="welcome" pl="20px" fontSize="9xl" color="white">
               Welcome!
             </Text>
           </Center>
           <Center>
-            <Text pt="30px" fontSize="5xl" color="white">
+            <Text data-testid="send" pt="30px" fontSize="5xl" color="white">
               Send a cheque?
             </Text>
           </Center>
@@ -51,7 +51,8 @@ function Home(props) {
               rightIcon={<MdSend />}
               colorScheme="red"
               variant="solid"
-              onClick={()=> props.history.push("/chequebuilder")}
+              data-testid="button"
+              // onClick={()=> props.history.push("/chequebuilder")}
             >
               Click Here!
             </Button>

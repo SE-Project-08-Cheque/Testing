@@ -33,7 +33,7 @@ function Navbar(props) {
   const logout=()=>{
     SessionService.clearSession();
     setUpdate(Date.now());
-    his.push('/');
+    // his.push('/');
   }
 
   const [show, setShow] = React.useState(false);
@@ -57,12 +57,12 @@ function Navbar(props) {
       zIndex="10000"
     >
       <Flex align="center" mr={5}>
-        <Link as={ReactRouterLink} to="/">
+        <a href='/'>
           <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
             {props.heading}
             <i className="fab fa-typo3" />
           </Heading>
-        </Link>
+          </a>
       </Flex>
 
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
@@ -76,13 +76,16 @@ function Navbar(props) {
         flexGrow={1}
         pl="20px"
       >
-        <MenuItems>
-          <Link as={ReactRouterLink} to="/">
+        <MenuItems
+>
+          {/* <Link as={ReactRouterLink} to="/"> */}
+            <a href='/' data-testid = 'home'>
             Home
-          </Link>
+            </a>
+          {/* </Link> */}
         </MenuItems>
         <MenuItems>
-        <a target="_blank" href="https://drive.google.com/file/d/1AdNMc9rVaYs0j5dFtpDZk72LFPk_h6Hv/view?usp=sharing">About Us</a>
+        <a  target="_blank" href="https://drive.google.com/file/d/1AdNMc9rVaYs0j5dFtpDZk72LFPk_h6Hv/view?usp=sharing" data-testid = 'about_us'>About Us</a>
         </MenuItems>
         
         
@@ -102,7 +105,7 @@ function Navbar(props) {
           onClick={toggleColorMode}
         />
         {islogged ?
-          <Button bg="transparent" border="1px" onClick={()=>{logout()}}>
+          <Button  data-testid='log_out' bg="transparent" border="1px" onClick={()=>{logout()}}>
             Log out
         </Button> : <></>}
       </Box>

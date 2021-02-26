@@ -41,20 +41,20 @@ export default function FogotPin(props) {
   const islogged = SessionService.isAuthenticated();
   console.log(islogged);
 
-  if (!islogged) {
-    return (
-      <Redirect
-        to={{ pathname: '/', state: { from: props.location } }}
-      />
-    );
-  }
+  // if (!islogged) {
+  //   return (
+  //     <Redirect
+  //       to={{ pathname: '/', state: { from: props.location } }}
+  //     />
+  //   );
+  // }
 
   var getpin = () => {
 
-    API_Service.getpin(JSON.parse(SessionService.getdata()).customer_id + "", (result) => {
-        console.log(result);
-        props.history.push('/');      
-    });
+    // API_Service.getpin(JSON.parse(SessionService.getdata()).customer_id + "", (result) => {
+    //     console.log(result);
+    //     props.history.push('/');      
+    // });
   }
   return (
     <Grid
@@ -72,7 +72,7 @@ export default function FogotPin(props) {
         <Avatar className={classes.avatar}>
 
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography data-testid='forgotpin-text' component="h1" variant="h5">
           Fogot Pin
         </Typography>
         
@@ -86,6 +86,7 @@ export default function FogotPin(props) {
           fullWidth
           variant="contained"
           color="primary"
+          data-testid='getpin-button'
           className={classes.submit}
           onClick={getpin}
         >

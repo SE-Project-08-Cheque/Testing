@@ -32,7 +32,7 @@ function Footer(props) {
         width="100%"
       >
         <Center w="100%" mb="10px">
-          <Text color={colorMode === 'light' ? 'white' : 'white'}>
+          <Text data-testid='designer' color={colorMode === 'light' ? 'white' : 'white'}>
             Designed by University of Moratuwa | 2021 All Rights Reserved
           </Text>
         </Center>

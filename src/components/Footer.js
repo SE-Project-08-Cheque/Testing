@@ -12,23 +12,16 @@ function Footer() {
   return (
     <div className="footer-container">
       <section className="footer-subscription">
-        <p className="footer-subscription-heading">
+        <p data-testid='subcription-heading' className="footer-subscription-heading">
           Do you need technical guidance?
         </p>
-        <p className="footer-subscription-text">
+        <p data-testid='subcription-text' className="footer-subscription-text">
           Send us what you want to know. We will contact you as soon as possible.
         </p>
         <div className="input-areas">
           <form>
-            <input
-              className="footer-input"
-              name="inquiry"
-              type="text"
-              colorScheme="red"
-              placeholder="Inquiry"
-            />
 
-            <Button rightIcon={<ArrowForwardIcon />} colorScheme="green" variant="outline" size="md">
+            <Button data-testid='send' rightIcon={<ArrowForwardIcon />} colorScheme="green" variant="outline" size="md">
               Send us
  
             </Button>

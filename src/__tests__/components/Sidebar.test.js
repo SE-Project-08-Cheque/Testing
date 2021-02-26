@@ -1,10 +1,16 @@
+// import dependencies
 import React from 'react';
+// import react dom
 import ReactDOM from 'react-dom';
-import Sidebar from '../../components/Sidebar';
+// import react-testing methods
 import {render, cleanup, fireEvent} from '@testing-library/react';
+// add custom jest matchers from jest-dom
 import "@testing-library/jest-dom/extend-expect";
-
+// import renderer for take snapshots
 import renderer from 'react-test-renderer';
+
+// import the component for testing
+import Sidebar from '../../components/Sidebar';
 
 afterEach(cleanup);
 
@@ -16,7 +22,12 @@ it("renders without crashing", () => {
 it("renders button correctly", () => {
     const {getByTestId} = render(<Sidebar />)
     expect(getByTestId('overview')).toBeTruthy();
+    expect(getByTestId('personal_details')).toBeInTheDocument();
+    expect(getByTestId('contact_details')).toBeInTheDocument();
+    expect(getByTestId('notification')).toBeInTheDocument();
+    expect(getByTestId('forgot_pin')).toBeInTheDocument();
 })
+
 
 it("matches snapshot", () => {
     const tree = renderer.create(<Sidebar />).toJSON();

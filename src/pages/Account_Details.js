@@ -24,7 +24,6 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 import Sidebar from '../components/Sidebar';
-import Alert from '../components/Alert';
 import {
   ArrowRightIcon,
   CheckCircleIcon,
@@ -43,17 +42,17 @@ function Account_Details(props) {
   const islogged=SessionService.isAuthenticated();
   console.log(islogged);
 
-  if(!islogged){
-    return (
-      <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-    );
-  }
-  var data=SessionService.getdata();
-  console.log("1423");
-  var user=JSON.parse(data);
-  console.log(user);
+  // if(!islogged){
+  //   return (
+  //     <Redirect
+  //               to={{ pathname: '/', state: { from: props.location } }}
+  //           />
+  //   );
+  // }
+  // var data=SessionService.getdata();
+  // console.log("1423");
+  // var user=JSON.parse(data);
+  // console.log(user);
   return (
     <>
       <div className="dashboard">
@@ -104,7 +103,7 @@ function Account_Details(props) {
                     aria-label="Send email"
                     icon={<ViewIcon />}
                   />
-                  NIC : {user.NIC}                </Text>
+                  NIC : {props.NIC}                </Text>
               </Tooltip>
             </Box>
             <Box
@@ -123,7 +122,7 @@ function Account_Details(props) {
                     aria-label="Call"
                     icon={<SunIcon />}
                   />
-                Full Name : {user.full_name}
+                Full Name : {props.full_name}
                 </Text>
               </Tooltip>
             </Box>
@@ -144,7 +143,7 @@ function Account_Details(props) {
                     aria-label="Send email"
                     icon={<StarIcon/>}
                   />
-                  Name with initials : {user.name_with_init}
+                  Name with initials : {props.name_with_init}
                 </Text>
               </Tooltip>
             </Box>
@@ -165,7 +164,7 @@ function Account_Details(props) {
                     aria-label="Send email"
                     icon={<CheckCircleIcon />}
                   />
-                  Date of Birth : {user.dob.slice(0,10)}
+                  Date of Birth : {props.dob}
                 </Text>
               </Tooltip>
             </Box>
