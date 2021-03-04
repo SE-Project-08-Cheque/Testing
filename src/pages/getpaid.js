@@ -47,13 +47,13 @@ function Getpaid(props) {
       const classes = useStyles();
 
 
-    if (!islogged) {
-        return (
-            <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-        );
-    }
+    // if (!islogged) {
+    //     return (
+    //         <Redirect
+    //             to={{ pathname: '/', state: { from: props.location } }}
+    //         />
+    //     );
+    // }
 
     const load = () => {
         API_Service.getAllgetReceivedCheque(JSON.parse(SessionService.getdata()).user_id, (res) => {

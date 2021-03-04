@@ -42,13 +42,13 @@ function Staff_Dash(props) {
     const islogged = SessionService.isAuthenticated();
     console.log(islogged);
 
-    if (!islogged) {
-        return (
-            <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-        );
-    }
+    // if (!islogged) {
+    //     return (
+    //         <Redirect
+    //             to={{ pathname: '/', state: { from: props.location } }}
+    //         />
+    //     );
+    // }
     var data = SessionService.getdata();
     console.log("1555");
     var user = JSON.parse(data);
@@ -83,7 +83,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                         <div className="e-card-header-caption">
-                               <Button onClick={()=>{props.history.push('/Approve')}}>Approve</Button>
+                               <Button onClick={()=>{
+                                //    props.history.push('/Approve')
+                                   }}>Approve</Button>
                             </div>
                         </div>
                         <div className="e-card-content">
@@ -101,7 +103,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                             <div className="e-card-header-caption">
-                               <Button onClick={()=>{props.history.push('/StaffReg')}}>Staff Register</Button>
+                               <Button onClick={()=>{
+                                //    props.history.push('/StaffReg')
+                                   }}>Staff Register</Button>
                             </div>
                         </div>
                         <div className="e-card-content">
@@ -118,7 +122,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                             <div className="e-card-header-caption">
-                               <Button onClick={()=>{props.history.push('/AllNotifications')}}>My Notifications</Button>
+                               <Button onClick={()=>{
+                                //    props.history.push('/AllNotifications')
+                                   }}>My Notifications</Button>
                             </div>
                         </div>
                         <div className="e-card-content">
@@ -134,7 +140,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                             <div className="e-card-header-caption">
-                               <Button onClick={()=>{props.history.push('/eval')}}>Do Evaluation</Button>
+                               <Button onClick={()=>{
+                                //    props.history.push('/eval')
+                                   }}>Do Evaluation</Button>
                             </div>
                         </div>
                         <div className="e-card-content">
@@ -151,7 +159,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                             <div className="e-card-header-caption">
-                            <Button onClick={()=>{props.history.push('/AllCustomers')}}>All Customers</Button>
+                            <Button onClick={()=>{
+                                // props.history.push('/AllCustomers')
+                                }}>All Customers</Button>
                             </div>
                         </div>
                         <div className="e-card-content">
@@ -168,7 +178,9 @@ function Staff_Dash(props) {
                     <div className="e-card-stacked">
                         <div className="e-card-header">
                             <div className="e-card-header-caption">
-                            <Button onClick={()=>{props.history.push('/evaledbyme')}}>My Evals</Button>
+                            <Button onClick={()=>{
+                                // props.history.push('/evaledbyme')
+                                }}>My Evals</Button>
                             
                             </div>
                         </div>

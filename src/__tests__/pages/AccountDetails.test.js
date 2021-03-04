@@ -62,3 +62,4 @@ it("matches snapshot", () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+

@@ -2,9 +2,9 @@ class SessionService{
   
   
  
-  initSession(JSON){
-    sessionStorage.setItem("JSON", JSON);
-  }
+  // initSession(JSON){
+  //   sessionStorage.setItem("JSON", JSON);
+  // }
   clearSession(){
     sessionStorage.removeItem("JSON");
   }
