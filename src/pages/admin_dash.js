@@ -24,13 +24,13 @@ function Admin_Dashboard(props) {
   const islogged=SessionService.isAuthenticated();
   console.log(islogged);
 
-  if(!islogged){
-    return (
-      <Redirect
-                to={{ pathname: '/', state: { from: props.location } }}
-            />
-    );
-  }
+  // if(!islogged){
+  //   return (
+  //     <Redirect
+  //               to={{ pathname: '/', state: { from: props.location } }}
+  //           />
+  //   );
+  // }
   return (
     <>
       <div className="main-section">
