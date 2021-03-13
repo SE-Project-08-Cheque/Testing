@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="check"
+  data-testid="cheque"
+>
+  <div
+    className="border"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="one"
+        >
+          <div
+            className="title"
+          >
+            <div
+              className="ownerName"
+            />
+            <div
+              className="name"
+            >
+              <br />
+              <br />
+            </div>
+          </div>
+          <div
+            className="following"
+          >
+            <table
+              className="table"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    className="line"
+                  >
+                    This check is in payment of the following
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    className="empty line"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="empty line"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            className="date"
+          />
+        </div>
+        <div
+          className="one"
+        >
+          <div
+            className="title"
+          >
+            <div
+              className="payto"
+            />
+            <div
+              className="orderof"
+            >
+              
+               rupees only
+            </div>
+          </div>
+          <div
+            className="following"
+          />
+          <div
+            className="adt"
+          >
+            <fieldset
+              style={
+                Object {
+                  "marginTop": "-15px",
+                }
+              }
+            >
+              <legend>
+                <div
+                  className="amounttxt"
+                >
+                  amount
+                </div>
+              </legend>
+              <div
+                style={
+                  Object {
+                    "fontSize": "12px",
+                  }
+                }
+              >
+                LKR
+              </div>
+              <div
+                className="t"
+              >
+                0.00
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div
+          className="three"
+        >
+          <div
+            className="company"
+          >
+            <div
+              className="companyName"
+            >
+              OUR BANK
+            </div>
+            <div
+              className="companyDetails"
+            >
+              OUR BANK 
+              <br />
+              COMPANY ADDRESS
+              <br />
+               CITY, XIP
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -24,7 +24,7 @@ function AllNotifications(props) {
     const [reqlist, setReqlist] = useState([]);
     const [toloaded, setToloaded] = useState(true);
     const islogged = SessionService.isAuthenticated();
-    console.log(islogged);
+    // console.log(islogged);
 
    
     
@@ -59,6 +59,9 @@ function AllNotifications(props) {
     }
 
     const load = () => {
+      // console.log('kkkkkkkkkkkkkkkkkkkkkkk')
+      // console.log(SessionService.getdata())
+      // console.log(JSON.parse(SessionService.getdata()))
         API_Service.getAllNotificationByID(JSON.parse(SessionService.getdata()).user_id, (res) => {
             if (res === 'ERROR') {
                 console.log('-----')
@@ -76,7 +79,7 @@ function AllNotifications(props) {
         setToloaded(false);
 
     }
-    console.log(reqlist);
+    // console.log(reqlist);
 
     var side = JSON.parse(SessionService.getdata()).user_type === "CUSTOMER";
 

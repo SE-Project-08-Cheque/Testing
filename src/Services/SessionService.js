@@ -13,7 +13,12 @@ class SessionService{
     //return (sessionStorage.getItem("JSON")!=null);
   }
   getdata(){
-    return sessionStorage.getItem("JSON")
+    if(sessionStorage.getItem("JSON")){
+      return sessionStorage.getItem("JSON")
+    }else{
+      return '{"user_id":"0"}'
+    }
+    
   }
 }
 export default new SessionService();

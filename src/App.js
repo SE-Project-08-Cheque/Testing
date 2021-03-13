@@ -15,6 +15,7 @@ import Account_Details from './pages/Account_Details';
 import Staff_Dash from './pages/Staff_Dash';
 import StaffReg from './pages/signupstaff';
 import Approve from './pages/approve';
+import Evaledbyme from './pages/ChequelistEve';
 import AllCustomers from './pages/allcustomers';
 import FogotPin from './pages/FogotPin';
 import AllNotifications from './pages/allnotifications';
@@ -22,7 +23,7 @@ import ChequeBuilder from './pages/ChequeBuilder/ChequeBuilder';
 import ListBuilder from './pages/senderviewsentcheques/Chequelist';
 import Getpaid from './pages/getpaid';
 import Evaluated from './pages/evaluated';
-import Evaledbyme from './pages/evalcheque/Chequelist';
+// import Evaledbyme from './pages/evalcheque/Chequelist';
 import Admin_Dashboard from './pages/admin_dash';
 
 function App(props) {

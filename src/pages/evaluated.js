@@ -112,6 +112,7 @@ function Evaluated(props) {
 
                     <TableBody>
                         {reqlist.map((row) => {
+                            {console.log(row.note)}
                             if (row.status == "EVALUATING") {
                                 return (
                                     <TableRow key={row.cheque_id}>

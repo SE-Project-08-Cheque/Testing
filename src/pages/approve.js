@@ -27,7 +27,7 @@ function Approve(props) {
     const [firstload,setFirstload]=useState(true);
     const [reqlist, setReqlist] = useState([]);
     const islogged = SessionService.isAuthenticated();
-    console.log(islogged);
+    // console.log(islogged);
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const useStyles = makeStyles({
@@ -90,7 +90,7 @@ function Approve(props) {
     
 
 
-    console.log(reqlist);
+    // console.log(reqlist);
    
     const StyledTableCell = withStyles((theme) => ({
         head: {

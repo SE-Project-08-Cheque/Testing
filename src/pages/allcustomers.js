@@ -23,7 +23,7 @@ function AllCustomers(props) {
     const [reqlist, setReqlist] = useState([]);
     const [firstload, setFirstload] = useState(true);
     const islogged = SessionService.isAuthenticated();
-    console.log(islogged);
+    // console.log(islogged);
 
 
     const [page, setPage] = React.useState(0);
@@ -59,6 +59,7 @@ function AllCustomers(props) {
     }
 
     const load = () => {
+      console.log('kkkkkkkkk')
         API_Service.getAllDataCustomerTable((res) => {
             if (res === 'ERROR') {
                 console.log('-----')
@@ -68,14 +69,13 @@ function AllCustomers(props) {
             }
 
         });
-
     }
     if(firstload){
         load();
         setFirstload(false);
     }
-    console.log(reqlist);
-const StyledTableCell = withStyles((theme) => ({
+    // console.log(reqlist);
+    const StyledTableCell = withStyles((theme) => ({
         head: {
           backgroundColor: theme.palette.common.black,
           color: theme.palette.common.white,
