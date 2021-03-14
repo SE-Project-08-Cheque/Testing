@@ -22,6 +22,7 @@ import API_Service from '../Services/API_Service';
 function AllCustomers(props) {
     const [reqlist, setReqlist] = useState([]);
     const [firstload, setFirstload] = useState(true);
+    console.log(SessionService.isAuthenticated())
     const islogged = SessionService.isAuthenticated();
     // console.log(islogged);
 
